@@ -1,3 +1,5 @@
+// to contribute to the interactive part of the Calendar
+
 const taskInput = document.querySelector(".task-input input"),
 filters = document.querySelectorAll(".filters span"),
 clearAll = document.querySelector(".clear-btn"),
@@ -8,6 +10,7 @@ isEditTask = false,
 todos = JSON.parse(localStorage.getItem("todo-list"));
 
 filters.forEach(btn => {
+    
     btn.addEventListener("click", () => {
         document.querySelector("span.active").classList.remove("active");
         btn.classList.add("active");
@@ -19,8 +22,10 @@ function showTodo(filter) {
     let liTag = "";
     if(todos) {
         todos.forEach((todo, id) => {
+
             let completed = todo.status == "completed" ? "checked" : "";
             if(filter == todo.status || filter == "all") {
+
                 liTag += `<li class="task">
                             <label for="${id}">
                                 <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
@@ -38,11 +43,17 @@ function showTodo(filter) {
         });
     }
     taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
+
     let checkTask = taskBox.querySelectorAll(".task");
+
     !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
+
     taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
 }
 showTodo("all");
+
+
+// to add a checked mark for activities completed
 
 function updateStatus(selectedTask) {
     let taskName = selectedTask.parentElement.lastElementChild;
