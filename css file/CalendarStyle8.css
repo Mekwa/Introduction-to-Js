@@ -2,12 +2,18 @@
     background-color: darkgray;
     background-image: url(../Images/background\ calendar\ 3.jpg);
 }
+
+/* styling the month of August */
+
 .month{
     text-align: center;
     font-size: 40px;
     color: white;
     padding-bottom: 40px;
 }
+
+/* styling the weeks of August */
+
 .weeks{
     font-size: 30px;
     margin-left: 50px;
@@ -22,6 +28,9 @@
 .Calendar0{
     color: darksalmon;
 }
+
+/* styling the days of August */
+
 .day1:hover{
     background-color: darkcyan;
 }
