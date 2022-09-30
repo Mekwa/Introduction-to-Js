@@ -16,6 +16,7 @@ p{
     color: red;
 }
 /* Full-width input fields */
+
 input[type=text], input[type=password], input[type=email], input[type=gender] {
   width: 100%;
   padding: 15px;
@@ -36,6 +37,7 @@ hr {
 }
 
 /* Set a style for all buttons */
+
 button {
   background-color: grey;
   color: white;
